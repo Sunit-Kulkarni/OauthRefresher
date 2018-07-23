@@ -20,8 +20,8 @@ router.get(
   })
 );
 
-//callback route for google to redirect to
-router.get('/google/redirect', (req, res) => {
+//callback route for google to redirect to - we have a code from the url - exchanging code for profile info
+router.get('/google/redirect', passport.authenticate('google'), (req, res) => {
   res.send('reached callback URI');
 });
 
