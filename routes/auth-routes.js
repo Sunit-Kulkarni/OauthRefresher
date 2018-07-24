@@ -22,7 +22,9 @@ router.get(
 
 //callback route for google to redirect to - we have a code from the url - exchanging code for profile info
 router.get('/google/redirect', passport.authenticate('google'), (req, res) => {
-  res.send('reached callback URI');
+  //req.user passport does this behind the scenes in passport-setup
+  //res.send(req.user);
+  //send to a profile page that is nicely formatted
 });
 
 module.exports = router;

@@ -9,5 +9,8 @@ module.exports = {
   mongodb: {
     dbURI:
       'mongodb://sk-google:helloworld1@ds147451.mlab.com:47451/sk-google-oath-test'
+  },
+  session: {
+    cookieKey: 'iamsoawesominthismultiverse'
   }
 };
