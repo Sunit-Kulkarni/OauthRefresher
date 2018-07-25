@@ -25,6 +25,7 @@ router.get('/google/redirect', passport.authenticate('google'), (req, res) => {
   //req.user passport does this behind the scenes in passport-setup
   //res.send(req.user);
   //send to a profile page that is nicely formatted
+  res.redirect('/profile/');
 });
 
 module.exports = router;
